@@ -16,7 +16,7 @@
     if (self = [super init]) {
         self.rightValue = (arc4random_uniform(10)+1)*self.leftValue;
         self.question = [NSString stringWithFormat:@"What is %ld divided by %ld?", self.rightValue, self.leftValue];
-        self.answer = (self.rightValue) + self.leftValue;
+        self.answer = self.rightValue / self.leftValue;
         self.startTime = [NSDate date];
         self.operation = @"division";
     }
