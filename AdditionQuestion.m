@@ -17,15 +17,18 @@
 {
     self = [super init];
     if (self = [super init]) {
-        [self generateQuestion];
+        self.question = [NSString stringWithFormat:@"What is %ld + %ld?", self.rightValue, self.leftValue];
+        self.answer = self.rightValue + self.leftValue;
+        self.startTime = [NSDate date];
+        self.operation = @"+";
     }
     return self;
 }
 
-- (void)gererateQuestion{
-    super.question = [NSString stringWithFormat:@"What is %ld + %ld?", self.rightValue, self.leftValue];
-    super.answer = self.rightValue + self.leftValue;
-}
+//- (void)gererateQuestion{
+//    super.question = [NSString stringWithFormat:@"What is %ld + %ld?", self.rightValue, self.leftValue];
+//    super.answer = self.rightValue + self.leftValue;
+//}
 
 
 

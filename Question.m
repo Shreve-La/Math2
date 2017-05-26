@@ -15,6 +15,7 @@
         _rightValue = arc4random_uniform(100);
         _leftValue = arc4random_uniform(100);
         _startTime = [NSDate date];
+        
         }
     return self;
     }

@@ -1,13 +1,13 @@
 //
-//  Division Question.m
+//  DivisionQuestion.h
 //  Maths
 //
 //  Created by swcl on 2017-05-04.
 //  Copyright © 2017 Shreve LaFramenta. All rights reserved.
 //
 
-#import "Division Question.h"
+#import "Question.h"
 
-@implementation Division_Question
+@interface DivisionQuestion : Question
 
 @end

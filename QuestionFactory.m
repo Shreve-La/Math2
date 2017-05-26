@@ -7,28 +7,19 @@
 //
 
 #import "QuestionFactory.h"
+
 @implementation QuestionFactory
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        }
-    return self;
-}
 
 
--(Question*)generateQuestion{
++(Question*)generateQuestion{
     NSArray *questionSubClassNames = @[@"AdditionQuestion",@"SubtractionQuestion",@"MultiplicationQuestion",@"DivisionQuestion"];
     int randomNum = arc4random_uniform(4);
-    NSLog(@"%d", randomNum);
-//  Question *question = [[NSClassFromString(questionSubClassNames[randomNum])alloc]init];
-    NSLog(@"%@", questionSubClassNames[randomNum]);
-    Question *question = [[NSClassFromString(questionSubClassNames[0])alloc]init];
-
-    return question;
+    NSLog(@"Type:%@ randomNum:%d", questionSubClassNames[randomNum], randomNum);
+    Question *questionObject = [[NSClassFromString(questionSubClassNames[randomNum])alloc]init];
+    NSLog(@"question: %@", questionObject.question);
+    return questionObject;
 }
-
 
 
 @end

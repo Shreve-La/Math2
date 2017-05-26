@@ -10,4 +10,8 @@
 
 @interface SubtractionQuestion : Question
 
+- (instancetype)init;
+
+
+
 @end

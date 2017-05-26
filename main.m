@@ -21,10 +21,10 @@ int main(int argc, const char * argv[]) {
         ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
         InputHandler *inputHandler = [[InputHandler alloc] init];
         QuestionManager *questionManager = [[QuestionManager alloc]init];
-        QuestionFactory *questionFactory = [[QuestionFactory alloc] init];
+//        QuestionFactory *questionFactory = [[QuestionFactory alloc] init];
         
         while (gameOn){
-            Question *question =  [questionFactory generateQuestion];
+            Question *question =  [QuestionFactory generateQuestion];
             NSLog(@"%@", question.question);
             
             printf("What is the answer: ");
@@ -41,7 +41,7 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"Your have %ld right, %ld wrong", (long)scoreKeeper.right, (long)scoreKeeper.wrong);
         
             }else{
-                NSLog(@"Wrong!");
+                NSLog(@"Wrong! The correct answer is: %ld", answer);
                 [scoreKeeper IncreaseWrong];
                 NSLog(@"Your have %ld right, %ld wrong", (long)scoreKeeper.right, (long)scoreKeeper.wrong);
                 }

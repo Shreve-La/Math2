@@ -10,6 +10,6 @@
 
 @interface AdditionQuestion : Question
 
-- (void)gererateQuestion;
+//- (void)gererateQuestion;
 
 @end

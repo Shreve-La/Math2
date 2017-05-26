@@ -11,7 +11,6 @@
 
 @interface QuestionFactory : NSObject
 
--(Question*)generateQuestion;
-
++(Question*)generateQuestion;
 
 @end
