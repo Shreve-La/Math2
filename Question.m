@@ -23,6 +23,7 @@
 - (NSInteger) getAnswer {
     self.endTime = [NSDate date];
     return self.answer;
+
 }
 
 - (NSInteger) answerTime {

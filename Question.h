@@ -17,6 +17,7 @@
 @property (nonatomic) NSInteger leftValue;
 @property (nonatomic) NSInteger rightValue;
 @property (nonatomic) NSString *operation;
+@property (nonatomic) NSInteger userAnswer;
 
 // -(NSTimeInterval)timeToAnswer;
 -(void)generateQuestion;

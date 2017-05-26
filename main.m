@@ -13,7 +13,6 @@
 #import "QuestionManager.h"
 #import "QuestionFactory.h"
 
-
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         BOOL gameOn = YES;
@@ -21,7 +20,6 @@ int main(int argc, const char * argv[]) {
         ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
         InputHandler *inputHandler = [[InputHandler alloc] init];
         QuestionManager *questionManager = [[QuestionManager alloc]init];
-//        QuestionFactory *questionFactory = [[QuestionFactory alloc] init];
         
         while (gameOn){
             Question *question =  [QuestionFactory generateQuestion];
@@ -30,11 +28,14 @@ int main(int argc, const char * argv[]) {
             printf("What is the answer: ");
             NSString* inputStr = [inputHandler getInput];
             
+            
             if ([inputStr isEqual: @"quit"]){
                 gameOn = NO;}
             
             NSInteger answer = [question getAnswer];
             NSInteger intValue = [inputStr integerValue];
+            question.userAnswer = intValue;
+            
             if (intValue == answer){
                 NSLog(@"Right!");
                 [scoreKeeper IncreaseRight];
